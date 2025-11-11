@@ -1,0 +1,13 @@
+{{ define "title" -}}
+{{ .Title | title }}
+{{- end }}
+{{ define "main" -}}
+{{ .Content }}
+<h1>King Kodaly</h1>
+
+asdf
+
+Kodaly quote of the day:
+<p>{{ .Site.Data.quote.quote.text }}</p>
+<p>{{ .Site.Data.quote.quote.ts }}</p>
+{{- end }}

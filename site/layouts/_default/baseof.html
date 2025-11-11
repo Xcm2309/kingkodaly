@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+	<title>King Kodaly</title>
+	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
+	{{ end -}}
+	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+	{{ end -}}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+</head>
+<body>
+<main>
+<article>
+{{ block "main" . }}
+{{ .Content }}
+{{ end }}
+</article>
+</main>
+</body>
+</html>
