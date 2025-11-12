@@ -4,10 +4,8 @@
 {{ define "main" -}}
 {{ .Content }}
 <h1>King Kodaly</h1>
-
-asdf
-
-Kodaly quote of the day:
-<p>{{ .Site.Data.quote.quote.text }}</p>
-<p>{{ .Site.Data.quote.quote.ts }}</p>
+<p class="quote">&ldquo;{{ .Site.Data.quote.quote.text }}&rdquo;</p>
+<p class="attribute"> -Kodaly<br>
+({{ .Site.Data.quote.quote.ts }})</p>
+<p class="links"><a href="{{ .Site.Data.quote.surrounds }}">Context</a> | <a href="https://github.com/Xcm2309/kingkodaly/tree/main">Fork me on GitHub!</a></p>
 {{- end }}
