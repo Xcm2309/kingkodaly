@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 0 * * *"  # Every day
+    - cron: "0 5 * * *"  # Every day at midnight EST
   workflow_dispatch:     # Optional: allows manual trigger
 
 jobs:
