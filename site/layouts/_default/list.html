@@ -4,8 +4,13 @@
 {{ define "main" -}}
 {{ .Content }}
 <h1>King Kodaly</h1>
+<hr>
+<br>
+<p>Wise words from the king himself...</p>
+<br>
 <p class="quote">&ldquo;{{ .Site.Data.quote.quote.text }}&rdquo;</p>
 <p class="attribute"> -Kodaly<br>
 ({{ .Site.Data.quote.quote.ts }})</p>
+<br>
 <p class="links"><a href="{{ .Site.Data.quote.surrounds }}">Context</a> | <a href="https://github.com/Xcm2309/kingkodaly/tree/main">Fork me on GitHub!</a></p>
 {{- end }}
