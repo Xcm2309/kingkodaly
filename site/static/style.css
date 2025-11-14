@@ -38,6 +38,8 @@ hr {
 
 .quote {
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .attribute {
