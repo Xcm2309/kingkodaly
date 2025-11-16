@@ -82,7 +82,7 @@ def get_overrustle_data(url):
 
 def get_short_date(message):
     dt = datetime.strptime(message['ts'], "%Y-%m-%dT%H:%M:%S.%fZ")
-    return dt.strftime("%Y-%m-%d")
+    return dt.strftime("%-m/%-d/%Y")
 
 if __name__ == "__main__":
     message = get_quote_message()
