@@ -12,11 +12,25 @@ GET_QUOTE_END_MONTH=10
 GET_QUOTE_MINIMUM_WORDS=3
 GET_QUOTE_MAX_TRIES=100
 GET_QUOTE_OUTPUT_PATH="./site/data/quote.json"
+GET_QUOTE_HISTORICAL_PATH="./site/data/historical.json"
+
+def generate_random_date():
+    for _ in range(100):
+        search_year = random.randint(GET_QUOTE_START_YEAR, GET_QUOTE_END_YEAR)
+        search_month = random.randint(GET_QUOTE_START_MONTH, GET_QUOTE_END_MONTH)
+        search_day = random.randint(1, 31)
+
+        try:
+            datetime(search_year, search_month, search_day)
+        except ValueError:
+            continue
+
+        return search_year, search_month, search_day
+
+    raise RuntimeError("Could not generate valid date!")
 
 def get_rustlesearch_url():
-    search_year = random.randint(GET_QUOTE_START_YEAR, GET_QUOTE_END_YEAR)
-    search_month = random.randint(GET_QUOTE_START_MONTH, GET_QUOTE_END_MONTH)
-    search_day = random.randint(1, 31)
+    search_year, search_month, search_day = generate_random_date()
     # https://api-v2.rustlesearch.dev/anon/search?start_date=2010-01-01&end_date=2025-11-11&channel=Destinygg&username=kodaly&search_after=1600574915000
     return ("https://api-v2.rustlesearch.dev/anon/search?"
             f"start_date={search_year}-{search_month:02d}-{search_day:02d}&"
@@ -84,9 +98,18 @@ def get_short_date(message):
     dt = datetime.strptime(message['ts'], "%Y-%m-%dT%H:%M:%S.%fZ")
     return dt.strftime("%-m/%-d/%Y")
 
+def update_historical(quote):
+    with open(GET_QUOTE_HISTORICAL_PATH, "r") as f:
+        arr = json.load(f)
+    arr.insert(0, quote)
+    with open(GET_QUOTE_HISTORICAL_PATH, "w") as f:
+        json.dump(arr, f, indent=4)
+
 if __name__ == "__main__":
     message = get_quote_message()
     short_date = get_short_date(message)
-    output = { "quote": message,  "date": short_date, "surrounds": get_surrounds_url(message)}
+    posted_date = datetime.now().strftime("%-m/%-d/%Y")
+    output = { "quote": message,  "date": short_date, "posted_date": posted_date, "surrounds": get_surrounds_url(message)}
     with open(GET_QUOTE_OUTPUT_PATH, 'w') as f:
         f.write(json.dumps(output, indent=4))
+    update_historical(output)

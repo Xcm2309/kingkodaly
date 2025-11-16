@@ -1,0 +1,30 @@
+{{ define "title" -}}
+{{ .Title | title }}
+{{- end }}
+{{ define "opengraph" -}}
+{{ .Content }}
+<meta property="og:title" content="King Kodaly" />
+<meta property="og:site_name" content="King Kodaly" />
+<meta property="og:image" content="/kodaly512.jpg">
+<meta property="og:description" content="This is a historical page containing the past quotes of the King. Last message: &ldquo;{{ .Site.Data.quote.quote.text }}&rdquo; ({{ .Site.Data.quote.date }})">
+{{- end }}
+{{ define "main" -}}
+{{ .Content }}
+<p>This is a historical page containing the past quotes of the King.</p>
+<table>
+    <tr>
+      <th>Date</th>
+      <th>Quote</th>
+      <th>Quote Date</th>
+      <th>Context</th>
+    </tr>
+{{ range .Site.Data.historical }}
+<tr>
+    <td>{{ .posted_date }}</td>
+    <td>{{ .quote.text }}</td>
+    <td>{{ .date }}</td>
+    <td><a href="{{ .surrounds }}">Context</a></td>
+</tr>
+{{ end }}
+</table>
+{{- end }}
