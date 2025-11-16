@@ -6,7 +6,7 @@
 <meta property="og:title" content="King Kodaly" />
 <meta property="og:site_name" content="King Kodaly" />
 <meta property="og:image" content="/kodaly512.jpg">
-<meta property="og:description" content="Wise words from the king himself: &ldquo;{{ .Site.Data.quote.quote.text }}&rdquo; ({{ .Site.Data.quote.quote.ts }})">
+<meta property="og:description" content="Wise words from the king himself: &ldquo;{{ .Site.Data.quote.quote.text }}&rdquo; ({{ .Site.Data.quote.date }})">
 {{- end }}
 {{ define "main" -}}
 {{ .Content }}
@@ -17,7 +17,7 @@
 <br>
 <p class="quote">&ldquo;{{ .Site.Data.quote.quote.text }}&rdquo;</p>
 <p class="attribute"> -Kodaly<br>
-({{ .Site.Data.quote.quote.ts }})</p>
+({{ .Site.Data.quote.date }})</p>
 <br>
 <p class="links"><a href="{{ .Site.Data.quote.surrounds }}">Context</a> | <a href="https://github.com/Xcm2309/kingkodaly/tree/main">Fork me on GitHub!</a></p>
 {{- end }}

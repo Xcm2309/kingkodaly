@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import random
 import requests
@@ -79,8 +80,13 @@ def get_overrustle_data(url):
 
     raise RuntimeError("Failed 5 times to download webpage!")
 
+def get_short_date(message):
+    dt = datetime.strptime(message['ts'], "%Y-%m-%dT%H:%M:%S.%fZ")
+    return dt.strftime("%Y-%m-%d")
+
 if __name__ == "__main__":
     message = get_quote_message()
-    output = { "quote": message, "surrounds": get_surrounds_url(message)}
+    short_date = get_short_date(message)
+    output = { "quote": message,  "date": short_date, "surrounds": get_surrounds_url(message)}
     with open(GET_QUOTE_OUTPUT_PATH, 'w') as f:
         f.write(json.dumps(output, indent=4))
