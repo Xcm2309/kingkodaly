@@ -65,3 +65,11 @@ td, th {
 tr:nth-child(odd) {
     background-color: #EFE0B2;
 }
+
+.figure-center img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
