@@ -2,6 +2,18 @@
     {
         "quote": {
             "channel": "Destinygg",
+            "text": "what is that white thing on the ground",
+            "ts": "2018-10-23T02:46:51.000Z",
+            "username": "kodaly",
+            "searchAfter": 1540262811000
+        },
+        "date": "10/23/2018",
+        "posted_date": "12/5/2025",
+        "surrounds": "https://rustlesearch.dev/surrounds?channel=Destinygg&date=2018-10-23T02%3A46%3A51.000Z&username=kodaly"
+    },
+    {
+        "quote": {
+            "channel": "Destinygg",
             "text": "_anon$ computer science homework",
             "ts": "2019-04-08T19:06:14.000Z",
             "username": "kodaly",
