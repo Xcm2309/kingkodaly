@@ -2,6 +2,18 @@
     {
         "quote": {
             "channel": "Destinygg",
+            "text": "is stream muted?",
+            "ts": "2016-04-15T20:42:36.000Z",
+            "username": "kodaly",
+            "searchAfter": 1460752956000
+        },
+        "date": "4/15/2016",
+        "posted_date": "2/11/2026",
+        "surrounds": "https://rustlesearch.dev/surrounds?channel=Destinygg&date=2016-04-15T20%3A42%3A36.000Z&username=kodaly"
+    },
+    {
+        "quote": {
+            "channel": "Destinygg",
             "text": "people don't believe that",
             "ts": "2016-05-25T21:00:58.000Z",
             "username": "kodaly",
