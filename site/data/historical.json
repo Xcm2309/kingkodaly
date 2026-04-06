@@ -2,6 +2,18 @@
     {
         "quote": {
             "channel": "Destinygg",
+            "text": "2 people WhoahDude",
+            "ts": "2018-10-14T08:04:36.000Z",
+            "username": "kodaly",
+            "searchAfter": 1539504276000
+        },
+        "date": "10/14/2018",
+        "posted_date": "4/6/2026",
+        "surrounds": "https://rustlesearch.dev/surrounds?channel=Destinygg&date=2018-10-14T08%3A04%3A36.000Z&username=kodaly"
+    },
+    {
+        "quote": {
+            "channel": "Destinygg",
             "text": "MrMouton chill out",
             "ts": "2019-06-02T04:56:20.000Z",
             "username": "kodaly",
