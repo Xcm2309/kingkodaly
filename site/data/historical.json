@@ -2,6 +2,18 @@
     {
         "quote": {
             "channel": "Destinygg",
+            "text": "yeah I got confused to",
+            "ts": "2019-07-20T19:20:57.000Z",
+            "username": "kodaly",
+            "searchAfter": 1563650457000
+        },
+        "date": "7/20/2019",
+        "posted_date": "4/30/2026",
+        "surrounds": "https://rustlesearch.dev/surrounds?channel=Destinygg&date=2019-07-20T19%3A20%3A57.000Z&username=kodaly"
+    },
+    {
+        "quote": {
+            "channel": "Destinygg",
             "text": "destiny go live",
             "ts": "2020-03-17T04:13:16.000Z",
             "username": "kodaly",
