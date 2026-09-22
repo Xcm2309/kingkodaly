@@ -2,6 +2,18 @@
     {
         "quote": {
             "channel": "Destinygg",
+            "text": "could break the server",
+            "ts": "2019-08-27T02:01:06.000Z",
+            "username": "kodaly",
+            "searchAfter": 1566871266000
+        },
+        "date": "8/27/2019",
+        "posted_date": "9/22/2026",
+        "surrounds": "https://rustlesearch.dev/surrounds?channel=Destinygg&date=2019-08-27T02%3A01%3A06.000Z&username=kodaly"
+    },
+    {
+        "quote": {
+            "channel": "Destinygg",
             "text": "you've got a lot to learn destiny",
             "ts": "2018-07-25T03:07:50.000Z",
             "username": "kodaly",
